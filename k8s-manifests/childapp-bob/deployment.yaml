@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-alice
+  labels:
+    name: app
+    # color: blue
+spec:
+  minReadySeconds: 30
+  strategy:
+    type: RollingUpdate
+  replicas: 3
+  selector:
+    matchLabels:
+      # app: nginxjs
+      # color: blue
+      name: app
+  template:
+    metadata:
+      name: blue
+      labels:
+        name: app
+        # app: nginxjs
+        # color: blue
+    spec:
+      containers:
+      - image: nginx:latest
+        name: nginx-alice
+        ports:
+          - containerPort: 80
