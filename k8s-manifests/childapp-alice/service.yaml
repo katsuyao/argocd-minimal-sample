@@ -12,6 +12,6 @@ spec:
       targetPort: 80
   selector:
     name: app
-    color: green
+    color: blue
   type: LoadBalancer
   loadBalancerIP: 172.16.140.201
