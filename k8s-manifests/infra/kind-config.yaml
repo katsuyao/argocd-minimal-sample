@@ -1,0 +1,11 @@
+# For setting up kind cluster with local environment
+# Be sure to confirm already installed docker in the laptop
+---
+apiVersion: kind.sigs.k8s.io/v1alpha3
+kind: Cluster
+nodes:
+- role: control-plane
+- role: worker
+  extraMounts:
+    - hostPath: /Users/hwakabh/kind/pv-data
+      containerPath: /tmp

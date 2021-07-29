@@ -2,10 +2,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-bob
+  name: nginx-alice
   labels:
     name: app
-    # color: blue
+    color: blue
 spec:
   minReadySeconds: 30
   strategy:
@@ -13,19 +13,24 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      # app: nginxjs
-      # color: blue
+      color: blue
       name: app
   template:
     metadata:
       name: blue
       labels:
         name: app
-        # app: nginxjs
-        # color: blue
+        color: blue
     spec:
       containers:
       - image: nginx:latest
-        name: nginx-bob
+        name: nginx-alice
         ports:
           - containerPort: 80
+        volumeMounts:
+        - name: www
+          mountPath: /var/www
+      volumes:
+      - name: www
+        persistentVolumeClaim:
+          claimName: pvc-alice-www
