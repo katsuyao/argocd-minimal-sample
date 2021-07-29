@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-alice
+  name: blue-nginx-alice
   labels:
     name: app
     color: blue

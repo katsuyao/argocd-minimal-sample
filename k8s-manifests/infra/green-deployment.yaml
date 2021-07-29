@@ -2,7 +2,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-alice
+  name: green-nginx-alice
+  namespace: childapp-alice
   labels:
     name: app
     color: green
@@ -17,7 +18,7 @@ spec:
       name: app
   template:
     metadata:
-      name: blue
+      name: green
       labels:
         name: app
         color: green
