@@ -24,3 +24,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: childapp-alice
+  # Enable auto-sync with git-repository
+  syncPolicy:
+    automated: {}
