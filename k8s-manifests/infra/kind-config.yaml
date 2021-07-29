@@ -8,4 +8,4 @@ nodes:
 - role: worker
   extraMounts:
     - hostPath: /Users/hwakabh/kind/pv-data
-      containerPath: /tmp
+      containerPath: /www
