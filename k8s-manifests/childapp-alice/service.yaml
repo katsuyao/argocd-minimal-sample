@@ -14,4 +14,4 @@ spec:
     name: app
     color: green
   type: LoadBalancer
-  loadBalancerIP: 172.16.140.201
+  loadBalancerIP: 172.18.255.201
