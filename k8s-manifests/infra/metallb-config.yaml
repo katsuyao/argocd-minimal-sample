@@ -5,6 +5,10 @@ metadata:
   namespace: metallb-system
   name: config
 data:
+  # https://kind.sigs.k8s.io/docs/user/loadbalancer/
+  # In kind environments, we should use docker network for metallb IP pools
+  # So need to check segments which docker would use with:
+  #   docker network inspect -f '{{.IPAM.Config}}' kind
   config: |
     address-pools:
     - name: default
