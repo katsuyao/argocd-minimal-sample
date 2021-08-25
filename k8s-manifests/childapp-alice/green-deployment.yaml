@@ -24,7 +24,7 @@ spec:
         color: green
     spec:
       containers:
-      - image: nginx:1.18
+      - image: nginx:latest
         name: nginx-alice
         ports:
           - containerPort: 80
