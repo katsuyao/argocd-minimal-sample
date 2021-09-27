@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: blue-nginx-alice
-  namespace: argocd-app
+  namespace: argocd-hwakabh
   labels:
     name: app
     color: blue
