@@ -16,7 +16,8 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-bob-www
+  name: pvc-alice-www
+  namespace: argocd-app
 spec:
   volumeName: pv-www
   accessModes:

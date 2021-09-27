@@ -2,26 +2,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: green-nginx-alice
-  namespace: childapp-alice
+  name: blue-nginx-alice
+  namespace: argocd-app
   labels:
     name: app
-    color: green
+    color: blue
 spec:
   minReadySeconds: 30
   strategy:
     type: RollingUpdate
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      color: green
+      color: blue
       name: app
   template:
     metadata:
-      name: green
+      name: blue
       labels:
         name: app
-        color: green
+        color: blue
     spec:
       containers:
       - image: nginx:latest
