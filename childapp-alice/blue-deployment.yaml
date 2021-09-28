@@ -27,10 +27,4 @@ spec:
         name: nginx-alice
         ports:
           - containerPort: 80
-        volumeMounts:
-        - name: www
-          mountPath: /var/www
-      volumes:
-      - name: www
-        persistentVolumeClaim:
-          claimName: pvc-alice-www
+
