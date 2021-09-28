@@ -13,5 +13,4 @@ spec:
   selector:
     name: app
     color: green
-  type: LoadBalancer
-  loadBalancerIP: 172.18.255.201
+  type: ClusterIP
