@@ -10,7 +10,7 @@ spec:
   minReadySeconds: 30
   strategy:
     type: RollingUpdate
-  replicas: 
+  replicas: 3
   selector:
     matchLabels:
       color: blue
